@@ -1,0 +1,96 @@
+@font-face {
+	font-family: "Ostrich Sans";
+	src: url("https://sicontis.com/codepen/cpc-even-odd/fonts/ostrichsansrounded-medium.woff2")
+			format("woff2"),
+		url("https://sicontis.com/codepen/cpc-even-odd/fonts/ostrichsansrounded-medium.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--base-color: #585858;
+	--bkg-color: #2e2b2b;
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	justify-items: center;
+	font-family: "Ostrich Sans", sans-serif;
+	background-color: var(--bkg-color);
+	background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+	color: var(--base-color);
+}
+
+.container {
+	width: 70vw;
+	height: min-content;
+	padding: 2em;
+}
+
+header {
+	width: 400px;
+	margin: 2em 0 4em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: none;
+	background-color: var(--bkg-color);
+	margin: 0;
+}
+
+label.cr {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--base-color);
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.color-pickers {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+input[type="color"] {
+	width: 35px;
+	height: 35px;
+	margin: -7px 0 0 -7px;
+	border: 0;
+	cursor: pointer;
+}
+
+label.cp {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-left: 7px;
+	overflow: hidden;
+}
+
+ol {
+	text-align: center;
+	list-style: none;
+}
+
+li {
+	font-size: clamp(4rem, 10vw, 7rem);
+	line-height: clamp(3rem, 9vw, 6rem);
+	display: inline-block;
+	transition: color 0.3s;
+}
